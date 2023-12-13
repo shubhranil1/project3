@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task-5</title>
+      <style>
+      *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+body{
+      padding: 0.14em 0.6rem 0;
+      color: rgb(240, 248, 255);
+      width: 100%;
+      min-height: 100vh;
+      letter-spacing: 2px;
+}
+:root{
+      --bg-color:rgb(240, 248, 255);
+      --top-color:#218ec4;
+      --menu-color:rgb(239 , 60 , 79);
+      --mid-color:rgb(39,49,71);
+      --banner-color:#efb413d1;
+      --image-color:rgb(192,228,230);
+      --extra-color:rgb(78,186,150);
+}
+.wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+}
+.mobile{
+      width: 15%;
+      min-height: 100vh;
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+}
+.mobile .header{
+      width: 100%;
+}
+.mobile .header .navBar .nav-logo{
+      width: 100%;
+}
+.mobile .header .navBar{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+}
+.mobile .header .navBar .nav-logo{
+      padding: 16px 1.3rem;
+}
+.nav-menu{
+      display: flex;
+      align-items: center;
+      padding: 16px 1.3rem;
+      justify-content: center;
+      background: var(--menu-color);
+      width: 100%;
+      text-transform: uppercase;
+}
+.mobile-main{
+      display: flex;
+      flex-direction: column;
+}
+.mobile-top{
+      height: 10.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--top-color);
+      text-transform: uppercase;
+}
+.mobile-mid{
+      height: 8.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--mid-color);
+      text-transform: uppercase;
+}
+.mobile-banner{
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--banner-color);
+      text-transform: uppercase;
+}
+.mobile-image{
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--image-color);
+      text-transform: uppercase;
+      color: #111;
+}
+.mobile-extra{
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--extra-color);
+      text-transform: uppercase;
+      color: #111;
+}
+.tablet{
+      margin-right: 10px;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+.tablet .header .navBar .nav-logo{
+      width: 100%;
+      padding: 16px 1.3rem;
+}
+.tablet-main{
+      display: flex;
+      flex-direction: column;
+}
+.tablet-top{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15rem;
+      background-color: var(--top-color);
+      text-transform: uppercase;
+}
+.tablet-bottom{
+      display: flex;
+      width: 100%;
+      height: 25rem;
+}
+.tablet-menu{
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--menu-color);
+}
+.tablet-right{
+      width: 75%;
+}
+.tablet-right-top{
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--mid-color);
+      text-transform: uppercase;
+}
+.tablet-right-mid{
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--banner-color);
+      text-transform: uppercase;
+}
+.tablet-right-bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 25%;
+}
+.tablet-right-bottom-left{
+      width: 50%;
+      background: var(--extra-color);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      text-transform: uppercase;
+}
+.tablet-right-bottom-right{
+      width: 50%;
+      background: var(--image-color);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111;
+      text-transform: uppercase;
+}
+.desktop{
+      width: 45%;
+}
+.desktop .header{
+      width: 100%;
+      height: 50px;
+      display: flex;
+}
+.navBar{
+      display: flex;
+      align-items: center;
+      width: 100%;
+}
+.nav-logo{
+      width: 30%;
+      float: left;
+      text-align: center;
+      background: #111;
+      height: 100%;
+      color: aliceblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.menu{
+      width: 70%;
+      float: right;
+      text-align: center;
+      background: var(--menu-color);
+      height: 100%;
+      color: aliceblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.top{
+      width: 100%;
+      height: 20rem;
+      display: flex;
+      background: var(--top-color);
+}
+.text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+}
+.bottom{
+      width: 100%;
+      height: 15rem;
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+}
+.left{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45%;
+      background: var(--mid-color);
+}
+.mid{
+      background: white;
+}
+.right{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      color: #111;
+}
+.right-top{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+      width: 100%;
+      background: var(--image-color);
+}
+.right-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50%;
+      width: 100%;
+      background-color: var(--extra-color);
+}
+.banner {
+      height: 80px;
+      background: var(--banner-color);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+}
+.bannerBox {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+}
+@media screen and (max-width: 768px){
+      .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+      }
+      .desktop,
+      .mobile,
+      .tablet{
+            width: 100%;
+      }
+}
+</style>
+</head>
+<body>
+      <div class="wrapper">
+            <div class="mobile">
+                  <h2 style="text-align: center;color:black; padding:0.5rem 0 0.3rem;">Mobile</h2>
+                  <header class="header">
+                        <nav class="navBar">
+                              <div class="nav-logo">
+                                    <p><b>HEADER</b></p>
+                              </div>
+                              <div class="nav-menu">
+                                    <p><b>MENU</b></p>
+                              </div>
+                        </nav>
+                  </header>
+                  <main class="mobile-main">
+                        <div class="mobile-top">
+                              <p><b>hero</b></p>
+                        </div>
+                        <div class="mobile-mid">
+                              <p><b>main</b></p>
+                        </div>
+                        <div class="mobile-banner">
+                              <p><b>banner</b></p>
+                        </div>
+                        <div class="mobile-image">
+                              <p><b>image</b></p>
+                        </div>
+                        <div class="mobile-extra">
+                              <p><b>extra</b></p>
+                        </div>
+                  </main>
+            </div>
+            <div class="tablet">
+                  <h2 style="text-align: center;color:black; padding:0.5rem 0 0.3rem;">Tablet</h2>
+                  <header class="header">
+                        <nav class="navBar">
+                              <div class="nav-logo">
+                                    <p><b>HEADER</b></p>
+                              </div>
+                        </nav>
+                  </header>
+                  <main class="tablet-main">
+                        <div class="tablet-top">
+                              <p><b>hero</b></p>
+                        </div>
+                        <div class="tablet-bottom">
+                              <div class="tablet-menu">
+                                    <p><b>menu</b></p>
+                              </div>
+                              <div class="tablet-right">
+                                    <div class="tablet-right-top">
+                                          <p><b>main</b></p>
+                                    </div>
+                                    <div class="tablet-right-mid">
+                                          <p><b>banner</b></p>
+                                    </div>
+                                    <div class="tablet-right-bottom">
+                                          <div class="tablet-right-bottom-left">
+                                                <p><b>extra</b></p>
+                                          </div>
+                                          <div class="tablet-right-bottom-right">
+                                                <p><b>image</b></p>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </main>
+            </div>
+            <div class="desktop">
+                  <h2 style="text-align: center;color:black; padding:0.5rem 0 0.3rem;">Desktop</h2>
+                  <div class="header">
+                        <nav class="navBar">
+                              <div class="nav-logo">
+                                    <p><b>HEADER</b></p>
+                              </div>
+                              <div class="menu">
+                                    <p><b>MENU</b></p>
+                              </div>
+                        </nav>
+                  </div>
+                  <section class="top">
+                        <div class="text">
+                              <p><b>HERO</b></p>
+                        </div>
+                  </section>
+                  <section class="bottom">
+                        <div class="left">
+                              <p><b>main</b></p>
+                        </div>
+                        <div class="mid"></div>
+                        <div class="right">
+                              <div class="right-top">
+                                    <p><b>image</b></p>
+                              </div>
+                              <div class="right-bottom">
+                                    <p><b>Extra</b></p>
+                              </div>
+                        </div>
+                  </section>
+                  <div class="banner">
+                        <div class="bannerBox">
+                              <div class="banner-logo">
+                                    <p><b>banner</b></p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>
